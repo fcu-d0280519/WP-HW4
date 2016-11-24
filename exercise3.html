@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>練習三</title>
+		<script src="jquery-3.1.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					$("#pict").hide();
+				});
+			});
+			$(document).ready(function(){
+				$("#btn2").click(function(){
+					$("#pict").show();
+				});
+			});
+			$(document).ready(function(){
+				$("#btn3").click(function(){
+					$("#pict").toggle();
+				});
+			});
+			$(document).ready(function(){
+				$("#btn4").click(function(){
+					$("#pict").fadeIn(1000);
+				});
+			});
+			$(document).ready(function(){
+				$("#btn5").click(function(){
+					$("#pict").fadeOut(1000);
+				});
+			});
+			$(document).ready(function(){
+				$("#btn6").click(function(){
+					$("#pict").fadeToggle(1000);
+				});
+			});
+			$(document).ready(function(){
+				$("#btn7").click(function(){
+					$("#pict").fadeTo("slow",0.5);
+				});
+			});
+			$(document).ready(function(){
+				$("#btn8").click(function(){
+					$("#pict").fadeTo("slow",1);
+				});
+			});
+			$(document).ready(function(){
+				$("#btn9").click(function(){
+					$("#pict").slideDown("slow");
+				});
+			});
+			$(document).ready(function(){
+				$("#btn10").click(function(){
+					$("#pict").slideUp("slow");
+				});
+			});
+			$(document).ready(function(){
+				$("#btn11").click(function(){
+					$("#pict").slideToggle("slow");
+				});
+			});
+			$(document).ready(function(){
+				$("#btn12").click(function(){
+					var div=$("div");
+					for(var i =0 ; i<=10 ; i++){
+						div.animate({opacity:'0.4'},"slow");
+						div.animate({opacity:'0.8'},"slow");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h2 class="test">Web JQuery Programming</h2>
+		<div id="pict" style="position=relative;">
+			<img src = "cat.jpg" width="250" height="208"
+				 alt = "貓">
+		</div>
+		
+		<button id="btn1">隱藏</button>
+		<button id="btn2">顯示</button>
+		<button id="btn3">隱藏/顯示</button><p>
+		<button id="btn4">淡入</button>
+		<button id="btn5">淡出</button>
+		<button id="btn6">淡入/淡出</button><p>
+		<button id="btn7">透明</button>
+		<button id="btn8">回復</button><p>
+		<button id="btn9">下滑</button>
+		<button id="btn10">上滑</button>
+		<button id="btn11">下滑/上滑</button><p>
+		<button id="btn12">閃爍</button><p>
+	</body>
+</html>
